@@ -69,6 +69,12 @@ INSERT INTO artist_genre
 	VALUES (8, 3, 8);
 INSERT INTO artist_genre
 	VALUES (9, 5, 9);
+INSERT INTO artist_genre
+	VALUES (10, 4, 1);
+INSERT INTO artist_genre
+	VALUES (11, 5, 7);
+INSERT INTO artist_genre
+	VALUES (12, 4, 5);
 
 --Заполнение таблицы артист-альбом
 INSERT INTO artist_album 
@@ -127,6 +133,14 @@ INSERT INTO track
 	VALUES (17, 'Oh My Darling Clementine',99 , 9);
 INSERT INTO track
 	VALUES (18, 'Спокойной Ночи',186 , 9);
+INSERT INTO track
+	VALUES (19, 'Together',228, 5);
+INSERT INTO track
+	VALUES (20, 'Can You Feel My Heart',249 , 7);
+INSERT INTO track
+	VALUES (21, 'Shut Down', 176, 1);
+INSERT INTO track
+	VALUES (22, 'PU$$Y BOY', 178, 4););
 
 --Заполнение таблицы сборник
 INSERT INTO compilation 
@@ -180,3 +194,9 @@ INSERT INTO Мusic_collection
 --Удаление таблицы по айди
 --DELETE FROM track  
 --WHERE id = 
+
+-- Изменения в таблицы
+--UPDATE album
+--SET year_of_issue = 2020
+--WHERE id = 2;
+

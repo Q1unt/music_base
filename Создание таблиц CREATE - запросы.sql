@@ -1,34 +1,34 @@
 --Создание таблицы артисты
 CREATE TABLE IF NOT EXISTS Artist(
 	id SERIAL PRIMARY KEY,
-	name VARCHAR (40) NOT NULL
+	name VARCHAR (40) UNIQUE NOT NULL
 );
 
 --Создание таблицы жанры
 CREATE TABLE IF NOT EXISTS Genre(
 	id SERIAL PRIMARY KEY,
-	name VARCHAR (50) NOT NULL
+	name VARCHAR (50) UNIQUE NOT NULL
 );
 
 --Cоздание таблицы альбом
 CREATE TABLE IF NOT EXISTS Album(
 	id SERIAL PRIMARY KEY,
-	name VARCHAR (50) NOT NULL,
-	year_of_issue INTEGER NOT NULL
+	name VARCHAR (50) UNIQUE NOT NULL,
+	year_of_issue INTEGER CHECK (year_of_issue > 2000) NOT NULL
 );
 
 --Создание таблицы сборников
 CREATE TABLE IF NOT EXISTS Compilation(
 	id SERIAL PRIMARY KEY,
-	name VARCHAR (50) NOT NULL,
-	year_of_issue INTEGER NOT NULL
+	name VARCHAR (50) UNIQUE NOT NULL,
+	year_of_issue INTEGER CHECK (year_of_issue > 2000) NOT NULL
 );
 
 --Создание таблицы треков
 --Связь один ко многим
 CREATE TABLE IF NOT EXISTS Track(
 	id SERIAL PRIMARY KEY,
-	name VARCHAR (50) NOT NULL,
+	name VARCHAR (50) UNIQUE NOT NULL,
 	duration INTEGER NOT NULL,
 	album_id INTEGER NOT NULL REFERENCES Album(id)
 );
