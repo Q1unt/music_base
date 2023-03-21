@@ -75,7 +75,6 @@ GROUP BY a2.name, ag.artist_id
 HAVING count(ag.genre_id) > 1;
 
 
-
 --Наименования треков, которые не входят в сборники.
 SELECT t.name AS track FROM track t 
 LEFT JOIN Мusic_collection mc ON t.id = mc.id 

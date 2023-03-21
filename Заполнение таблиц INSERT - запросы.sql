@@ -44,19 +44,18 @@ INSERT INTO artist_genre(genre_id, artist_id) VALUES
 	(4, 1),
 	(5, 7),
 	(3, 5);
+
 --Заполнение таблицы артист-альбом
---INSERT INTO artist_album(artist_id, albun_id) VALUES
---	(1, 1),
---	(2, 2),
---	(3, 3),
---	(4, 4),
---	(5, 5),
---	(6, 6),
---	(7, 7),
---	(8, 8),
---	(9, 9);
-INSERT INTO artist_album
-	VALUES(10, 5, 5);
+INSERT INTO artist_album(artist_id, albun_id) VALUES
+	(1, 1),
+	(2, 2),
+	(3, 3),
+	(4, 4),
+	(5, 5),
+	(6, 6),
+	(7, 7),
+	(8, 8),
+	(9, 9);
 
 --Заполнение таблицы трек
 INSERT INTO track(name, duration, album_id)  VALUES
